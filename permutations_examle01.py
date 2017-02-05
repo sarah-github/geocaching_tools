@@ -9,7 +9,8 @@ solutions = []
 for a, b, c, d, e, f, g, h, i in permutations(range(1, 10)):
     result = a * 10 / b + c / d + 11 / e + f + 12 + g + h - i + 13
 
-    if result == 43:
+    # presupposition for b, d and e
+    if b == 2 and d == 3 and e == 5 and round(result) == 43:
         solution = [a, b, c, d, e]
         # check if permutation of a - e already exists in solutions list
         # to get only unique permutations of a - e
@@ -22,7 +23,7 @@ for a, b, c, d, e, f, g, h, i in permutations(range(1, 10)):
         if not found:
           print("-----")
           solutions.append(solution)
-          print(str(solution))
+          print([a, b, c, d, e, f, g, h, i])
           count = count + 1
           print("No", count)
 
