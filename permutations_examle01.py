@@ -12,7 +12,7 @@ for a, b, c, d, e, f, g, h, i in permutations(range(1, 10)):
     if result == 43:
         solution = [a, b, c, d, e]
         # check if permutation of a - e already exists in solutions list
-        # to get only unique combinations of a - e
+        # to get only unique permutations of a - e
         found = False
         for sol in solutions:
             if sol == solution:
